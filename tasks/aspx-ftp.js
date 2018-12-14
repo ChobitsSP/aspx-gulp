@@ -14,7 +14,7 @@ gulp.task('aspx-ftp', function () {
     password: '123456',
     port: 21,
     parallel: 10,
-    log: logger.info
+    log: logger.info.bind(logger)
   }
 
   const conn = ftp.create(config);

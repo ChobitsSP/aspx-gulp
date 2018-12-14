@@ -19,7 +19,7 @@ const config = {
   user: "administrator",
   password: "123456",
   parallel: 10,
-  log: logger.info
+  log: logger.info.bind(logger)
 };
 
 gulp.task("bin", function () {
