@@ -16,6 +16,9 @@ function FileFilter() {
 function GetConfig() {
   const someFile = './tasks/config.json';
   const fs = require('fs');
+
+  if (!fs.existsSync(someFile)) return {};
+
   const json = fs.readFileSync(someFile, 'utf8');
   return JSON.parse(json);
 }

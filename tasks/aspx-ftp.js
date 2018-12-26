@@ -29,6 +29,6 @@ gulp.task('aspx-ftp', function () {
       base: destPath,
       buffer: false
     })
-    .pipe(conn.differentSize(remotePath)) // only upload newer files
+    //.pipe(conn.differentSize(remotePath)) // only upload newer files
     .pipe(conn.dest(remotePath));
 });

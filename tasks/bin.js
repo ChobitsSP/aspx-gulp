@@ -37,6 +37,6 @@ gulp.task("bin", function () {
       buffer: false
     })
     .pipe(filter(MyFilter))
-    .pipe(conn.newerOrDifferentSize(remotePath)) // only upload newer files
+    //.pipe(conn.newerOrDifferentSize(remotePath)) // only upload newer files
     .pipe(conn.dest(remotePath));
 });
